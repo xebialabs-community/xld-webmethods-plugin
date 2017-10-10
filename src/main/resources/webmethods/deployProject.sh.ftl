@@ -10,3 +10,5 @@
 
 -->
 
+Deploy -h ${deployed.container.targetHost} -p ${deployed.container.targetPort} -u ${deployed.container.targetUser} -x ${deployed.container.targetPassword} -r ${deployed.project} -n ${deployed.newCandidateName} -s ${deployed.newCandidateDescription} -b ${deployed.build} -m ${deployed.map} -d
+

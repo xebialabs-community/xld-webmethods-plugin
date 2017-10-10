@@ -15,4 +15,22 @@
            xmlns="http://www.xebialabs.com/deployit/synthetic"
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
+   <type type="webmethods.Server" extends="udm.BaseContainer">
+      <property name="host" kind="ci" referenced-type="overthere.Host" as-containment="true"/>
+      <property name="targetHost" kind="string" description="Webmethods target host to deploy built to"/>
+      <property name="targetPort" kind="string" description="Webmethods target port"/>
+      <property name="targetUser" kind="string" description="Webmethods username"/>
+      <property name="targetPassword" kind="string" description="Webmethods password" password="true"/>
+   </type>
+
+   <type type="webmethods.DeployedProject" extends="udm.BaseDeployed" deployable-type="webmethods.Project"
+         container-type="webmethods.Server" description="Webmethods Porject">
+      <generate-deployable type="webmethods.Project" extends="udm.BaseDeployable"/>
+         <property name="project" description=" Name of the project from which the build you are
+deploying was created."/>
+         <property name="newCandidateName" description=" Name to use for a new deployment candidate. The name can be up to 32-characters long and can include any character that is valid for a file name in your operating system. "/>
+         <property name="newCandidateDescription" description="Brief description of the new deployment candidate. The description length has no limit and can include any character that is valid for a file name in your operating system."/>
+         <property name="build" description="Name of the project build to deploy"/>
+         <property name="map" description=" Name of the deployment map that identifies the target Integration Servers to which to deploy the items in the selected project build. "/>
+   </type>
 </synthetic>

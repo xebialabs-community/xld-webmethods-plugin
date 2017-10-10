@@ -13,4 +13,23 @@
 
 <rules xmlns="http://www.xebialabs.com/xl-deploy/xl-rules">
 
+   <rule name="webmethods.DeployProject.CREATE_MODIFY" scope="deployed">
+      <conditions>
+         <type>webmethods.DeployedProject</type>
+         <operation>CREATE</operation>
+         <operation>MODIFY</operation>
+      </conditions>
+      <steps>
+         <os-script>
+            <description expression="true">"Backup %s Webmethods" % (deployed.project)</description>
+            <script>webmethods/backupProject</script>
+            <order>10</order>
+         </os-script>
+         <os-script>
+            <description expression="true">"Deploy %s Project" % (deployed.project)</description>
+            <script>webmethods/deployProject</script>
+            <order>30</order>
+         </os-script>
+      </steps>
+   </rule>
 </rules>

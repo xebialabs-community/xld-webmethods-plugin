@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<#--
 
     Copyright 2017 XEBIALABS
 
@@ -11,5 +10,6 @@
 
 -->
 
+echo "Backing up project ${deployed.project}"
 
-<!-- for synthetic, xl-rest-endpoints, xl-ui-plugin, etc. -->
+
