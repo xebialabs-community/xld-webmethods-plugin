@@ -1,4 +1,4 @@
-# XL [Deploy|Release] [Description|Interface] plugin v1.0.0
+# XL Deploy Webmethods plugin v1.0.0
 
 [![Build Status][xld-webmethods-plugin-travis-image]][xld-webmethods-plugin-travis-url]
 [![License: MIT][xld-webmethods-plugin-license-image]][xld-webmethods-plugin-license-url]
@@ -12,10 +12,8 @@
 
 ## Preface
 
-This document describes the functionality provided by the XL Release [Description|Interface] plugin.
+This document describes the functionality provided by the XL Deploy Webmethods plugin.
 
-See the [XL Release reference manual](https://docs.xebialabs.com/xl-release) for background information on XL Release and release automation concepts.
-or
 See the [XL Deploy reference manual](https://docs.xebialabs.com/xl-deploy) for background information on XL Deploy and deployment automation concepts.
 
 ## Overview
@@ -25,6 +23,8 @@ See the [XL Deploy reference manual](https://docs.xebialabs.com/xl-deploy) for b
 Note:  XLD or XLR version should not be lower than lowest supported version.  See <https://support.xebialabs.com/hc/en-us/articles/115003299946-Supported-XebiaLabs-product-versions>.
 
 ## Installation
+
+Copy the plugin file to the `[XLD_HOME]/plugins` folder and restart the server
 
 ## Features/Usage/Types/Tasks
 
